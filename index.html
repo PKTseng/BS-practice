@@ -78,14 +78,15 @@
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0" >
-            <button class="btn btn-outline-info my-2 my-sm-0 mr-3" type="button" data-toggle="modal" data-target="#LogicModal">Logic</button>
-            <button class="btn btn-info my-2 my-sm-0" type="button" data-toggle="modal" data-target="#RegisteredModal">Registered</button>
+            
+            <a href="#" class="btn btn-outline-info my-2 my-sm-0 mr-3" type="button" data-toggle="modal" data-target="#LogicModal">Logic</a>
+            <a  href="#" class="btn btn-info my-2 my-sm-0" type="button" data-toggle="modal" data-target="#RegisteredModal">Registered</a>
             </form>
         </div>
       </div>
     </nav>
 
-<!-- Modal -->
+<!-- Login Modal -->
 <div class="modal fade" id="LogicModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -96,19 +97,31 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
+
+        <form>
+          <div class="form-group">
+            <label for="email">address</label>
+            <input type="email" class="form-control" id="email" placeholder="email@mail" required>
+            <div class="invalid-feedback">Please write a Email</div>
+          </div>
+          <div class="form-group">
+            <label for="Password1">Password</label>
+            <input type="password" class="form-control" id="Password1" required placeholder="******">
+            <div class="invalid-feedback">Please write a Password</div>
+          </div>
+        </form>
       </div>
       <div class="modal-footer">
         <a href="#" data-dismiss="modal" class="mr-auto" data-toggle="modal" data-target="#RegisteredModal">切換到註冊</a>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Login</button> 
       </div>
     </div>
   </div>
 </div>
 
 
-<!-- Modal -->
+<!-- Registered-Modal -->
 <div class="modal fade" id="RegisteredModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -119,12 +132,37 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
+        <div class="row">
+          <div class="col-md-6">
+            <h2>注意事項</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas amet consequuntur impedit esse nobis molestiae culpa voluptates facilis necessitatibus hic ut eligendi omnis dolore alias officia doloribus, deserunt architecto debitis.</p>
+          </div>
+          <div class="col-md-6">
+            <form>
+          <div class="form-group">
+            <label for="Email1">address</label>
+            <input type="email" class="form-control" id="Email1" placeholder="example@mail.com" required>
+            <div class="invalid-feedback">Please write a Email</div>
+          </div>
+          <div class="form-group">
+            <label for="Password1">Password</label>
+            <input type="password" class="form-control" id="Password1" required>
+            <div class="invalid-feedback">Please write a Password</div>
+          </div>
+          <div class="form-group">
+            <label for="Password2">check Password</label>
+            <input type="password" class="form-control" id="Password2" required>
+            <div class="invalid-feedback">Please write a Password</div>
+          </div>
+        </form>
+          </div>
+        </div>
+         
       </div>
       <div class="modal-footer">
         <a href="#" data-dismiss="modal" class="mr-auto" data-toggle="modal" data-target="#LogicModal">切換到登入</a>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="Registered" class="btn btn-primary">Registered</button>
       </div>
     </div>
   </div>
@@ -312,22 +350,27 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14692.009990658966!2d120.16894519329068!3d22.98693563850675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e760a4746938b%3A0xd42605ccdec15626!2z6Kqg5ZOB5pu45bqXIOWPsOWNl-WuieW5s-W6lw!5e0!3m2!1szh-TW!2stw!4v1578468477254!5m2!1szh-TW!2stw" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
       </div>
       <div class="col-md-6">
-      <form>
+      <form class="needs-validation" novalidate>
         <div class="form-group">
           <label for="name">姓名*</label>
           <input type="name" class="form-control" id="name" placeholder="name" required> 
+          <div class="invalid-feedback">Please write a username.</div>
+
         </div>
         <div class="form-group">
           <label for="tel">請輸入電話號碼*</label>
           <input type="tel" class="form-control" id="tel" placeholder="請輸入電話號碼" required>
+          <div class="invalid-feedback">Please write a telphone-number.</div>
         </div>
         <div class="form-group">
           <label for="email">請輸入 Email</label>
           <input type="email" class="form-control" id="email" placeholder="請輸入 Email" required>
+          <div class="invalid-feedback">Please write a email.</div>
         </div>
         <div class="form-group">
           <label for="number">請輸入人數*</label>
           <input type="number" class="form-control" id="number" placeholder="請輸入人數" required>
+          <div class="invalid-feedback">Please write a number.</div>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
@@ -385,10 +428,6 @@
 </div>
 </footer>
 
-
-
-
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -406,6 +445,45 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+
+    </script>
+
+    <script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+
+
+<script>
+$(document).ready(function(){
+  console.log('ready');
+  $('a[data-dismiss="modal"][data-toggle="modal"]').on('click', function() {
+    console.log('click');
+    var target = $(this).data('target');
+    console.log('target', target);
+    $(target).on('shown.bs.modal', function () {
+      $('body').addClass('modal-open');
+    });
+  });
+  // <a href="" class="mr-auto" data-toggle="modal" data-dismiss="modal" data-target="#loginModal">已經有帳號了？</a>
+});
+</script>
   </body>
 </html>
 
