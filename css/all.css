@@ -21,3 +21,10 @@
 .mk{
     color: #00cc99;
 }
+
+
+@media (max-width: 768px) { 
+    .text-md-white{
+        color: #ffffff;
+    }
+}
