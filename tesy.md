@@ -4,6 +4,10 @@
 範例為簡單的計數器
 在第8行用 data 來 return 一個物件，這時的 data 必須是函式。
 如果 data 是物件的話，那 counter 是不會被宣告兩次的，但如果 data 是函式的時候，每次只要執行 +1 都會 return 出一個新物件，這樣組件在使用的時候，就不會同時被影響，因為 return 出來的物件都會是新建立的物件
+
+範例為簡單的計數器
+在第8行用 data 來 return 一個物件，這時的 data 必須是函式。
+如果 data 是物件的話，那 counter 是不會被宣告兩次的，但如果 data 是函式的時候，每次只要執行 +1 都會 return 出一個新物件，這樣組件在使用的時候，就不會同時被影響，因為 return 出來的物件都會是新建立的物件
 ```htmlmixed=
 <div id='app'>
   <counter></counter>
